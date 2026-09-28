@@ -1,0 +1,25 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+
+app:
+  base-url: http://localhost:5173
+  share:
+    default-ttl-minutes: 30
+    max-ttl-minutes: 180
+    max-files: 50
+    max-total-size-bytes: 10737418240
+    default-max-receivers: 1
+    max-allowed-receivers: 5
+  cors:
+    allowed-origins: http://localhost:5173
+  rate-limit:
+    capacity: 20
+    window-seconds: 60
+
+logging:
+  level:
+    in.unshare: DEBUG
